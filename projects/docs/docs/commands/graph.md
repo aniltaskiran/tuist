@@ -86,7 +86,7 @@ When the `--format` argument is specified as `json`, the following JSON schema i
 | Key       | Description                                                                                                             |
 | --------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `name`    | Name of the target.                                                                                                     |
-| `product` | The product type of the target. See (Product)[https://docs.tuist.io/manifests/project#product] for all possible values. |
+| `product` | The product type of the target. See (Product)[https://docs.tuist.io/manifest-api-reference#product] for all possible values. |
 
 ##### Scheme
 
@@ -99,7 +99,7 @@ When the `--format` argument is specified as `json`, the following JSON schema i
 
 | Key    | Description                                                                                                      |
 | ------ | ---------------------------------------------------------------------------------------------------------------- |
-| `kind` | The type of the package. See (Package)[https://docs.tuist.io/manifests/project#package] for all possible values. |
+| `kind` | The type of the package. See (Package)[https://docs.tuist.io/manifest-api-reference#package] for all possible values. |
 | `path` | Absolute path to the package.                                                                                    |
 
 Sample JSON output:
