@@ -43,3 +43,5 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "[Release] Tuist ${{ github.event.inputs.version }} - ${{ github.event.inputs.title }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
