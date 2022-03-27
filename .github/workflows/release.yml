@@ -21,6 +21,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: ${{ github.head_ref }}
+        token: ${{ secrets.GH_RELEASE_TOKEN }}
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ env.RUBY_VERSION }}
@@ -43,5 +44,3 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "[Release] Tuist ${{ github.event.inputs.version }} - ${{ github.event.inputs.title }}"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
