@@ -35,6 +35,11 @@ jobs:
       run: |
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
+    - name: "Build Changelog"
+      id: build_changelog
+      uses: mikepenz/release-changelog-builder-action@{latest-release}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
     - name: Update Tuist version
       # This step updates the version in the Constants.swift file by replacing the current tag in Constants.swift with the tagged release.
       # This step also updates the CHANGELOG.md to rename the Next section to the proper release version.
